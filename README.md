@@ -1,38 +1,63 @@
-# django-todo
-A simple todo app built with django
+Todo App CI/CD Project
+# This project is a simple Todo application with a continuous integration and continuous deployment (CI/CD) pipeline. The app is built using Django, and it is containerized using Docker. The deployment is done on an EC2 instance.
 
-![todo App](https://raw.githubusercontent.com/shreys7/django-todo/develop/staticfiles/todoApp.png)
-### Setup
-To get this repository, run the following command inside your git enabled terminal
-```bash
-$ git clone https://github.com/shreys7/django-todo.git
-```
-You will need django to be installed in you computer to run this app. Head over to https://www.djangoproject.com/download/ for the download guide
+Features
+1. User authentication (login/signup)
 
-Once you have downloaded django, go to the cloned repo directory and run the following command
+2. Add, update, and delete tasks
 
-```bash
-$ python manage.py makemigrations
-```
+3. Mark tasks as completed
 
-This will create all the migrations file (database migrations) required to run this App.
+4.CI/CD pipeline for automated testing, building, and deployment
 
-Now, to apply this migrations run the following command
-```bash
-$ python manage.py migrate
-```
+Technologies
+Python 3.8
+Django 3.2
+Docker
+AWS EC2
 
-One last step and then our todo App will be live. We need to create an admin user to run this App. On the terminal, type the following command and provide username, password and email for the admin user
-```bash
-$ python manage.py createsuperuser
-```
+GitHub for version control
 
-That was pretty simple, right? Now let's make the App live. We just need to start the server now and then we can start using our simple todo App. Start the server by following command
+Jenkins for CI/CD pipeline
 
-```bash
-$ python manage.py runserver
-```
+Setup
+Prerequisites
+Docker installed on your local machine
 
-Once the server is hosted, head over to http://127.0.0.1:8000/todos for the App.
+AWS EC2 instance
 
-Cheers and Happy Coding :)
+Jenkins for CI/CD setup
+
+GitHub repository with the project code
+
+Steps
+Clone the repository:
+git clone https://github.com/anjana2468/cicd-project
+Build the Docker image: Navigate to the project directory and build the Docker image:
+
+
+docker build -t my-app .
+Run the Docker container: Run the container on port 8081:
+
+bash
+Copy
+Edit
+docker run -d -p 8081:8080 my-app
+Access the app: Open your web browser and go to http://<EC2_PUBLIC_IP>:8081 to access the Todo app.
+
+CI/CD with Jenkins
+Jenkins Setup:
+
+Set up a Jenkins job to automate the build and deployment process.
+
+Ensure that Jenkins has access to your GitHub repository.
+
+Configure the pipeline to build the Docker image and deploy it to your EC2 instance.
+
+Pipeline Script: The Jenkins pipeline script automates the following steps:
+
+Fetch the latest changes from GitHub
+
+Build the Docker image
+
+Run the Docker container on your EC2 instance
