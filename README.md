@@ -1,3 +1,4 @@
+
 # Todo App CI/CD Project
 
 This project is a simple Todo application with a continuous integration and continuous deployment (CI/CD) pipeline. The app is built using Django, and it is containerized using Docker. The deployment is done on an EC2 instance.
@@ -69,4 +70,6 @@ Build the Docker image
 
 Run the Docker container on your EC2 instance
 
-
+![Screenshot 2025-03-29 151830](https://github.com/user-attachments/assets/06da412a-7cf6-4148-8b0b-1e59f220d24d)
+![Screenshot 2025-03-29 152016](https://github.com/user-attachments/assets/82eb2a30-750e-4a88-b20b-51f2d7aa2696)
+![Screenshot 2025-03-29 151756](https://github.com/user-attachments/assets/a410b67a-37b2-4bc5-89de-c01ea95e824e)
