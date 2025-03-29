@@ -1,5 +1,4 @@
-
-FROM python:3.8  # Use a specific Python version for better control
+FROM python:3.8
 
 WORKDIR /data
 
@@ -11,17 +10,14 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*  # Clean up to reduce image size
 
 # Install Django
-RUN pip install --upgrade pip && \
-    pip install django==3.2
+RUN pip install --upgrade pip && pip install django==3.2
 
-# Copy the project files into the container
+# Copy project files into the container
 COPY . .
 
-# Run migrations
-RUN python manage.py migrate
-
-# Expose the port the app will run on
+# Expose the application port
 EXPOSE 8000
 
-# Start the Django development server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# Run migrations and start the server
+CMD ["sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
+
