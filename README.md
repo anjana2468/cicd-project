@@ -36,3 +36,37 @@ Clone the GitHub repository to your local machine:
 ```bash
 git clone https://github.com/anjana2468/cicd-project
 cd cicd-project
+```
+#### 2. Build the Docker Image
+Navigate to the project directory and build the Docker image:
+
+```
+docker build -t my-app .
+```
+#### 3. Run the Docker Container
+Run the container on port 8081:
+```
+docker run -d -p 8081:8080 my-app
+```
+#### 4. Access the App
+Open your web browser and go to http://<EC2_PUBLIC_IP>:8081 to access the Todo app.
+
+Replace <EC2_PUBLIC_IP> with the public IP address of your EC2 instance.
+
+## Jenkins Setup
+Set up a Jenkins job to automate the build and deployment process.
+
+Ensure that Jenkins has access to your GitHub repository.
+
+Configure the pipeline to build the Docker image and deploy it to your EC2 instance.
+
+## Pipeline Script
+The Jenkins pipeline script automates the following steps:
+
+Fetch the latest changes from GitHub
+
+Build the Docker image
+
+Run the Docker container on your EC2 instance
+
+
