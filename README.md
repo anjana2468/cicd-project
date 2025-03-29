@@ -70,6 +70,8 @@ Build the Docker image
 
 Run the Docker container on your EC2 instance
 
-![Screenshot 2025-03-29 151830](https://github.com/user-attachments/assets/06da412a-7cf6-4148-8b0b-1e59f220d24d)
-![Screenshot 2025-03-29 152016](https://github.com/user-attachments/assets/82eb2a30-750e-4a88-b20b-51f2d7aa2696)
-![Screenshot 2025-03-29 151756](https://github.com/user-attachments/assets/a410b67a-37b2-4bc5-89de-c01ea95e824e)
+![Screenshot 2025-03-29 151756](https://github.com/user-attachments/assets/6da858b0-b0dc-4fe0-8362-8d77fea96b8e)
+![Screenshot 2025-03-29 151830](https://github.com/user-attachments/assets/86d9b3fa-94b3-4bc9-871c-0ee8e828495e)
+![Screenshot 2025-03-29 152016](https://github.com/user-attachments/assets/374c0f81-bf1b-4f10-bc5e-6b2bc6a69b5e)
+
+
